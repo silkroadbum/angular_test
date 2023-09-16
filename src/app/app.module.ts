@@ -10,6 +10,8 @@ import { FormsModule } from '@angular/forms';
 import { FilterProductsPipe } from './pipes/filter-products.pipe';
 import { CreateProductComponent } from './components/create-product/create-product.component';
 import { ModalComponent } from './components/modal/modal.component';
+import { ReactiveFormsModule } from '@angular/forms';
+import { FocusDirective } from './directives/focus.directive';
 
 @NgModule({
   declarations: [
@@ -18,13 +20,15 @@ import { ModalComponent } from './components/modal/modal.component';
     GlobalErrorComponent,
     FilterProductsPipe,
     CreateProductComponent,
-    ModalComponent
+    ModalComponent,
+    FocusDirective
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
-    FormsModule
+    FormsModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
